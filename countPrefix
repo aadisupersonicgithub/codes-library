@@ -1,0 +1,14 @@
+vector<i64> Countprefix(vector<i64> &a) {
+    i64 n = a.size();
+    vector<i64> ans(n + 1); 
+    for (i64 i = 0; i < n; i++) {
+        ans[a[i]]++;
+    }
+    for (i64 i = n - 1 ; i > 0; i--) {
+        ans[a[i - 1]] += ans[i];
+    }
+    for (i64 i = 0; i <= n; i++) {
+        ans[i] += 1;
+    }
+    return ans; 
+}
