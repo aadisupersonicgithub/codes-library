@@ -1,2 +1,2 @@
 # devi-prasad-codes-library
-Library of competitive code snippets.
+Personal competitive code snippets.
