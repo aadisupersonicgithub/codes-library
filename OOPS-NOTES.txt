@@ -1,0 +1,291 @@
+OOPS 
+
+1. Meaning of OOPS?    
+    OOPS - its a programming model / paradigm revolving around 'object' 
+    Object - real world instace of entities like 'class' eg. tumhari bmw 
+    class - blueprint of object characteristic(eg color, chassis_num) and behaviour(start, gear_change) eg BMW 
+
+    Characteristics = data, attributes, or properties
+    Behaviours = functions, procedures or methods 
+
+2. need of OOPS?
+    - easily manage without actual implementation
+    - readability, understandabilit and maintainibility multifold inc.  
+    + objects give 
+    - easily access
+    - modify the instance data and methods
+    - interact with other objects
+    - define methods in runtime 
+
+3. oops languages?
+    java, python, c++, c#(sharp), javascript, php 
+
+4. other paradigms exc OOPS?
+    ie classification of lang based on features.
+    1. Imperative - WHAT todo
+        a. Procedural {top to bottom}
+        b. OOps  {object+data+behaviour}
+        c. Parallel {subtask parallel}
+    2. Declarative - HOW todo
+        a. Logical {formal logic, sentences expressing facts and rules}
+        b. Fucntional {applying and composing functions.}
+        c. Database {data and info structured as fields, records, and files.}
+
+5. Structured programming?
+     structure = a block, which contains a set of rules, and has a definitive control flow, 
+    eg (if/then/else), (while and for), block structures, and subroutines. 
+    all paradigms uses this 
+
+*6. Main feature of OOPS?
+    Inheritance 
+    Encapsulation
+    Polymorphism
+    data Abstraction AEIP 
+
+7. Advantage of OOPs 
+    complex problem create manage handled 
+    code reused ie NO Redundancy
+    hides unnecessary details via help of Data Abstraction.
+    OOps uses bottom up, unlike structural ie top-down 
+    Polymorphism gives flexibility
+
+8. Why is OOPs so popular 
+    6 + 7 + better style 
+
+Advanced 
+---------
+
+9. Class ? 
+    blueprint(data+behaviour) , 1class->many object. bmw 
+10. object?
+    instance of class, real world use, use space eg meri bmw 
+11. Encapsulation ? 
+    binding data members and methods of a program together to do a specific job, without revealing unnecessary details. 
+    ie capsule me pack (data + function)
+    2 types 
+    i) Data Hiding : (~~abstraction ?)
+        Hiding unwanted info eg restricting access to some members of object.
+    ii) Data Binding :
+        ie binding data member and its function. 
+        done for each identifier (ie vars)  
+        for fun its matching call with right fun defn . 
+        types  
+        i) late binding ii) early binding.
+
+12. Polymorphism ? 
+    Poly-many morph-shape 
+    process by which some code, data, method, or object behaves differently under different circumstances or contexts. 
+    types 
+    i) Compile-time poly ii) Run time poly 
+
+13. Compile-time vs run-time poly ?
+    Compile-time = Static poly  static or early binding 
+        happens at compile time ie compiler decides what shape or value has to be taken by the entity in the picture.
+        eg int add(int x, int y) {}     int add(int x, double y) {}     int add(int x, int y, int z) {}     int add(double x, int y) {}
+    Run-time = dynamic or late binding 
+         happens at the run time. What it means compiler cant decide what shape or value has to be taken, but depends on execution. 
+    // todo code and saurabh 2 lecture 
+
+14. how does C++ support Polymorphism ? 
+    i) compile-time -> support via Templates, Function Overloading and Default Arguements.
+    ii) run-time -> via Virtual function -> take the shape of the functions based on the type of object in reference and are resolved at runtime.
+
+15. Inheritance ? 
+    code reuseablity 
+
+
+a. method overriding ?
+    same function same prototype in both par and child. 
+    class A{void f(){}};    class B{pubilc:void f(){};};
+b. method hiding 
+    same function name but diff prototype + in DIFF class 
+    class A{void f(){}};    class B{pubilc:void f(int x){};};
+c. function overloading ?
+    same function name but diff prototype + in SAME class 
+    class A{void f(){} void f(int x){};};
+
+
+16. abstraction ? 
+    - Hiding unnecessary details from user. 
+
+17. memory via class ? 
+    - ZERO, its object which takes memory when initialized.
+
+18. is it necessary to create object ? 
+    - no iff have static methods call directly by class name.
+
+19. constructor ? 
+    - special method with name = classname
+    - no return type
+    - special purpose to initialize object and specifies them space  
+
+20 + 21. types of constructor ? 
+
+    - Default Cons. - constructor with no arguement / parameter.
+    - Parametrized Cons. - takes some arg. 
+    - Copy Cons. - uses object to initialze object.
+
+22. destructor ?  
+    ~className(){};     
+    - no return type
+    - free up resources
+    - automatically invoked when object destroy
+    - execute things to be done at end.
+
+23. class vs structure ? 
+    NOT same, differece list :-  
+    Structure                       Class 
+    - in stack memory                 in heap memory
+    - cant achieve data abstraction   mostly used.
+    - no accesbility ie public(def)   private(def), public, protected
+    - nope                            support polymorphism, inheritance     
+
+24. Inheritance ?
+    - code reuse facility
+    - vehicle->car, bus, truck, bike->pickup, sportCar, convertible
+
+25. Cons of inheritance 
+    ***with more powers comes more complications. its is a very powerful feature in here, but it has some limitations too***
+    - more processing time as navigate b/w multiple classes.
+    - tightly coupled, so nested debugging o/w unexpected errors.
+
+26. types of inheritance 
+    single              multiple            multilevel              hierarchical            hybrid (mix)
+    A                   A      B                A                       A                       A  
+    |                       |                   |                       |                       | 
+    B                       C                   B                   B   C    D               B      C 
+-                                               |                                                |
+-                                               C                                                D  
+    
+    - multiple hierarchical just ulta yaad rakho bs 
+    - single multilevel Naam se hi clear  
+    - hybrid mixture of any of these.
+
+27. subclass ?  
+    subclass =  derived / extended /  child class 
+    - entity which inherits from another class.
+
+28. superclass ? 
+    superclass =  base / parent class  
+    - class which allows subclasses to inherit from itself.
+
+29. what is interface ? 
+    - special class with only fun declarations.
+    - to use interface, we cant create objects. instead implement interface & define methods of its implementation.
+
+30. static polymorphisme ?
+    - compile time poly's nickname
+    - its feature via which object is linked with fun or operator based on values, during compile time via compiler.
+    - achieved through method overloading or operator overloading + (templates / defaultArg ? )
+
+
+
+31. dynamic polymorphism ? 
+    - runtime poly's nickname 
+    - feature by which actual implementation of function is decided during runtime / execution.
+    - achieved with help of method overriding.
+
+32. diff bw overloading & overriding 
+         overloading                                                     overriding 
+    - feature of compile-time poly                                    feature of run-time poly 
+    - multipleImplement                                               multipleImplement 
+    - sameName diffArg                                                sameName sameArg
+    - eg method overloaoding / operator overloading                   eg method overriding 
+
+33. How is data abstraction accomplished ?  
+    - with help of abstract methods, abstract classes 
+   
+
+34  abstract class ? 
+    - abstract class is any class with pure virtual function ie virtual void fun() = 0;
+    - abstract class ka object nahi bn skta 
+    - agar child class bani to i) ya to waha b isko pure virtual declare kro or separte implementation likho 
+    - ab bhi agar par* a = new child(); to parent wala bind ie why virtual likha tha 
+    - eg person ->  student , teacher ... but person insignificant 
+    - eg accountInterest fun -> saving / salaray ...  but for a/c it have no meaning so make A/c class abstract. 
+
+35  abstract class vs interface class ? 
+     both are special types of classes that contain only the methods declaration and not their implementation.
+    DIFF : 
+    - when an interface is implemented, the subclass must define all its methods and provide its implementation. 
+    - Whereas when an abstract class is inherited, the subclass does not need to provide the definition of its abstract method, 
+        until and unless the subclass is using it.
+    - an abstract class can contain abstract methods as well as non-abstract methods.
+
+    - abstraction is CONCEPT of blackBox (i/p -> unknown processing -> o/p) .. blackbox is abstractClass 
+
+        abstract class                              interface   
+    - have abstract+non abstract funs             only abstract  
+    - dont support multiple inheritance           does  
+    - can provide implementation of interface     cant provide imple of abstractClass 
+    - abstract -> multiple interace               only interface->interface 
+    - partial(0 - 100%) abstraction               100% abstraction. 
+
+36. access specifier and its significance ? 
+    special keyword used to specify / control accesibility of entities like class / methods  
+    3 types : public protected private  
+    help achieves Encapsulation
+
+37. exception ? 
+    special events, raised during execution of program at runtime, bringing execution down to halt. 
+    eg user vs program conflicts. 
+
+38. exception handling ? 
+    no ones wants S/w to crash, majorly due to Exceptions.
+    handle those beforehand, decide what to do at each possible unwanted ie exception handling 
+    eg try catch throw  
+
+39. garbage collection ? 
+    free up the unwanted memory of objects 
+
+40. can we run java without implementing oops ? 
+    nope  
+
+a->b->c 
+agar c ka object banega ..pahle a, then b, then c ka construct chalega 
+
+todos :-  (for quizzes and programs)
+Understanding "extern" keyword in C
+Understanding "register" keyword in C
+Comparison of static keyword in C++ and Java
+Function overloading and const keyword
+C++ mutable keyword
+Static Keyword in C++
+_Generic keyword in C
+restrict keyword in C
+
+
+facts : 
+- "SmallTalk" was the first programming language developed which was purely object oriented. 
+- It was developed by Alan Kay. OOP concept came into the picture in 1970's.
+
+- "Ada" lang supports classes, but does not support the concept of Polymorphism?
+
+- Java is an object-oriented programming language but does not support all inheritance types.
+
+- can we use C language to demonstrate Polymorphism? 
+  yes, By creating a VTable (virtual Table) and providing proper access between base and derived objects,
+    we can achieve inheritance and polymorphism in C
+
+- which superclass member won’t be accessible to the subclass? private memeber 
+
+Encapsulation - 
+- combination of data-hiding and abstraction.
+- Encapsulation can be achieved by Declaring all the variables in the class as private and 
+    writing public methods in the class to set and get the values of variables
+- in encap the variables or data of a class is hidden from any other class and 
+    can be accessed only through any member function of its own class in which it is declared.
+
+- wrapping up of data under a single unit. 
+- mechanism that binds together code and the data it manipulates
+advantage of encap: 
+ - data hiding 
+ - increased flexibility 
+ - reusability 
+ - easy testing 
+
+
+
+
+
+{}
