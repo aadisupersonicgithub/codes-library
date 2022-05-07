@@ -1,12 +1,13 @@
+
 template<typename T> 
 class DSU { 
 public:
     T U; 
-    vector<T> p, sz; 
+    vector<T> p, Sz; 
     DSU() {}
-    DSU(T n) : p(n + 1), sz(n + 1) {
+    DSU(T n) : p(n + 1), Sz(n + 1) {
         iota(p.begin(), p.end(), 0);  
-        fill(sz.begin(), sz.end(), 1);
+        fill(Sz.begin(), Sz.end(), 1);
     }
     T Find(T a) {
         if (a == p[a]) {
@@ -18,10 +19,10 @@ public:
         a = Find(a); 
         b = Find(b); 
         if (a != b) {
-            if (sz[a] < sz[b]) {
+            if (Sz[a] < Sz[b]) {
                 swap(a, b);        
             }
-            sz[a] += sz[b];
+            Sz[a] += Sz[b];
             p[b] = a;
             return true; 
         }
